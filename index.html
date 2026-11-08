@@ -1,59 +1,146 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr" data-ui="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bubble Odyssey Team</title>
-  <meta name="description" content="Bubble Odyssey Team — makers of Bubble Odyssey, a colourful bubble shooter.">
-  <link rel="icon" href="bubble-odyssey/icon.png">
+  <title>Velaris Labs</title>
+  <meta name="description" content="Velaris Labs — telefonlar için uygulamalar ve oyunlar: Astelya, Bubble Odyssey, Köprü Ustası, Isochron.">
+  <link rel="icon" href="astelya/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <script>
+    // Kayıtlı seçim yoksa tarayıcı dili Türkçe ise Türkçe, değilse İngilizce
+    (function () {
+      var lang = 'tr';
+      try { lang = localStorage.getItem('velaris.lang') || ''; } catch (e) { lang = ''; }
+      if (lang !== 'tr' && lang !== 'en') lang = /^tr\b/i.test(navigator.language || '') ? 'tr' : 'en';
+      document.documentElement.setAttribute('data-ui', lang);
+      document.documentElement.setAttribute('lang', lang);
+    })();
+  </script>
 </head>
 <body>
   <div class="wrap">
+    <div class="top">
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-set="tr" aria-pressed="true">TR</button>
+        <button type="button" data-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
     <header class="hero">
-      <h1>Bubble Odyssey Team</h1>
-      <p>We make bright, relaxing puzzle games for phones.</p>
+      <div class="mark">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="#c9a24b"/><circle cx="31" cy="9" r="1.6" fill="#eef0ff"/></svg>
+        <h1>Velaris Labs</h1>
+      </div>
+      <p>
+        <span lang="tr">Telefonlar için özenle hazırlanmış uygulamalar ve oyunlar.</span>
+        <span lang="en">Thoughtfully made apps and games for phones.</span>
+      </p>
     </header>
 
-    <section class="card">
-      <div class="game">
-        <img src="bubble-odyssey/icon.png" alt="Bubble Odyssey icon" width="112" height="112">
-        <div>
-          <h2 style="margin:0">Bubble Odyssey</h2>
-          <p>Aim, match and pop your way through 500 levels in 25 worlds. Rescue the critters, chase the gold coin and master changing, mirror and two-colour bubbles.</p>
-          <a class="btn" href="bubble-odyssey/">Game page</a>
-          <a class="btn secondary" href="bubble-odyssey/privacy.html">Privacy policy</a>
+    <main class="apps">
+      <section class="app">
+        <div class="app-head">
+          <img src="astelya/icon.png" alt="Astelya" width="72" height="72">
+          <div>
+            <h2>Astelya: Astrolog &amp; Harita</h2>
+            <span class="tag"><span lang="tr">Astroloji · Türkçe</span><span lang="en">Astrology · in Turkish</span></span>
+          </div>
         </div>
-      </div>
-    </section>
+        <p>
+          <span lang="tr">Kişisel astroloğun: doğum haritan, günlük yorumlar, Ay takvimi, transitler, tarot ve haritana özel sorularını yanıtlayan Lyra.</span>
+          <span lang="en">Your personal astrologer: birth chart, daily readings, moon calendar, transits, tarot and Lyra, who answers questions about your own chart.</span>
+        </p>
+        <div class="links">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.velarislabs.astria">Google Play</a>
+          <a class="btn" href="astria-privacy/"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+          <a class="btn" href="astria-privacy/kosullar.html"><span lang="tr">Kullanım koşulları</span><span lang="en">Terms of use</span></a>
+        </div>
+      </section>
 
-    <section class="card">
-      <div class="game">
-        <img src="kopru-ustasi/icon.png" alt="Köprü Ustası icon" width="112" height="112">
-        <div>
-          <h2 style="margin:0">Köprü Ustası · Wobbly Bridge</h2>
-          <p>Build wobbly bridges, send the minibus across and laugh when it all comes crashing down. 35 levels in 7 worlds, from the Bosphorus to the Moon.</p>
-          <a class="btn secondary" href="kopru-ustasi/privacy.html">Privacy policy</a>
+      <section class="app">
+        <div class="app-head">
+          <img src="bubble-odyssey/icon.png" alt="Bubble Odyssey" width="72" height="72">
+          <div>
+            <h2>Bubble Odyssey</h2>
+            <span class="tag"><span lang="tr">Bulmaca oyunu</span><span lang="en">Puzzle game</span></span>
+          </div>
         </div>
-      </div>
-    </section>
+        <p>
+          <span lang="tr">25 dünyada 500 seviye boyunca nişan al, eşleştir ve patlat. Yaratıkları kurtar, altın parayı kovala; değişen, ayna ve iki renkli balonlarda ustalaş.</span>
+          <span lang="en">Aim, match and pop your way through 500 levels in 25 worlds. Rescue the critters, chase the gold coin and master changing, mirror and two-colour bubbles.</span>
+        </p>
+        <div class="links">
+          <a class="btn primary" href="bubble-odyssey/"><span lang="tr">Oyun sayfası</span><span lang="en">Game page</span></a>
+          <a class="btn" href="bubble-odyssey/privacy.html"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </section>
 
-    <section class="card">
-      <div class="game">
-        <img src="isochron/icon.png" alt="Isochron icon" width="112" height="112">
-        <div>
-          <h2 style="margin:0">Isochron</h2>
-          <p>A timegrapher in your pocket: measure your mechanical watch's rate, beat error and amplitude with the phone's microphone, track it over time and look up its movement in a 117-calibre encyclopedia.</p>
-          <a class="btn secondary" href="isochron/privacy.html">Privacy policy</a>
+      <section class="app">
+        <div class="app-head">
+          <img src="kopru-ustasi/icon.png" alt="Köprü Ustası" width="72" height="72">
+          <div>
+            <h2>Köprü Ustası: Bridge Builder</h2>
+            <span class="tag"><span lang="tr">Fizik bulmacası</span><span lang="en">Physics puzzle</span></span>
+          </div>
         </div>
-      </div>
-    </section>
+        <p>
+          <span lang="tr">Sallanan köprüler kur, minibüsü karşıya geçir; her şey çökerken gül. Boğaz'dan Ay'a uzanan 7 dünyada 35 seviye.</span>
+          <span lang="en">Build wobbly bridges, send the minibus across and laugh when it all comes crashing down. 35 levels in 7 worlds, from the Bosphorus to the Moon.</span>
+        </p>
+        <div class="links">
+          <a class="btn" href="kopru-ustasi/privacy.html"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </section>
+
+      <section class="app">
+        <div class="app-head">
+          <img src="isochron/icon.png" alt="Isochron" width="72" height="72">
+          <div>
+            <h2>Isochron</h2>
+            <span class="tag"><span lang="tr">Saat doğruluğu ölçer</span><span lang="en">Watch timegrapher</span></span>
+          </div>
+        </div>
+        <p>
+          <span lang="tr">Cebindeki timegrapher: mekanik saatinin günlük sapmasını, vuruş hatasını ve genliğini telefonun mikrofonuyla ölç, zaman içinde takip et ve 117 kalibrelik ansiklopedide mekanizmasını incele.</span>
+          <span lang="en">A timegrapher in your pocket: measure your mechanical watch's rate, beat error and amplitude with the phone's microphone, track it over time and look up its movement in a 117-calibre encyclopedia.</span>
+        </p>
+        <div class="links">
+          <a class="btn" href="isochron/privacy.html"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      Contact: <a href="mailto:mogulkocbali@gmail.com">mogulkocbali@gmail.com</a>
+      <p>
+        <a href="https://play.google.com/store/apps/developer?id=Velaris+Labs"><span lang="tr">Google Play'deki tüm uygulamalarımız</span><span lang="en">All our apps on Google Play</span></a>
+      </p>
+      <p><span lang="tr">İletişim</span><span lang="en">Contact</span>: <a href="mailto:mogulkocbali@gmail.com">mogulkocbali@gmail.com</a></p>
+      <p>© 2026 Velaris Labs</p>
     </footer>
   </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll('.lang button');
+      function apply(lang) {
+        root.setAttribute('data-ui', lang);
+        root.setAttribute('lang', lang);
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang)); });
+      }
+      apply(root.getAttribute('data-ui'));
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var lang = b.getAttribute('data-set');
+          apply(lang);
+          try { localStorage.setItem('velaris.lang', lang); } catch (e) {}
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,91 @@
+/* Velaris Labs ana sayfası. Alt sayfalar (gizlilik politikaları) style.css kullanır; burası yalnızca index.html içindir. */
+:root {
+  --bg: #0b1026;
+  --bg2: #161d45;
+  --card: #ffffff;
+  --ink: #161a33;
+  --muted: #5d6385;
+  --line: #e7e9f4;
+  --accent: #c9a24b;
+  --accent-ink: #6e5314;
+  --link: #3b4bd8;
+  --on-dark: #eef0ff;
+  --on-dark-muted: #aab0d6;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 600px at 50% -10%, #2a3170 0%, transparent 60%), linear-gradient(180deg, var(--bg), var(--bg2)) fixed;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1.2px 1.2px at 8% 14%, #fff9, transparent),
+    radial-gradient(1px 1px at 26% 32%, #fff6, transparent),
+    radial-gradient(1.4px 1.4px at 64% 9%, #fffa, transparent),
+    radial-gradient(1px 1px at 82% 26%, #fff7, transparent),
+    radial-gradient(1.2px 1.2px at 46% 58%, #fff5, transparent),
+    radial-gradient(1px 1px at 91% 71%, #fff6, transparent),
+    radial-gradient(1.3px 1.3px at 14% 84%, #fff6, transparent),
+    radial-gradient(1px 1px at 58% 92%, #fff5, transparent);
+}
+a { color: var(--link); }
+.wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px 56px; position: relative; }
+
+.top { display: flex; justify-content: flex-end; }
+.lang { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: #ffffff14; }
+.lang button {
+  border: 0; border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer;
+  background: transparent; color: var(--on-dark-muted);
+}
+.lang button[aria-pressed="true"] { background: #fff; color: var(--ink); }
+
+.hero { text-align: center; color: var(--on-dark); padding: 28px 0 12px; }
+.mark { display: inline-flex; align-items: center; gap: 12px; }
+.mark svg { width: 40px; height: 40px; }
+.hero h1 { font-size: clamp(32px, 7vw, 48px); letter-spacing: -0.02em; margin: 0; font-weight: 800; }
+.hero p { color: var(--on-dark-muted); margin: 10px auto 0; max-width: 560px; font-size: 17px; }
+
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 18px; margin-top: 28px; }
+.app {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 16px 40px #0007;
+  display: flex;
+  flex-direction: column;
+}
+.app-head { display: flex; gap: 16px; align-items: center; }
+.app-head img { width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 6px 16px #0003; flex: none; }
+.app h2 { margin: 0; font-size: 20px; line-height: 1.25; font-weight: 800; }
+.tag { display: inline-block; margin-top: 4px; font-size: 13px; font-weight: 700; color: var(--muted); }
+.app p { color: #3a3f5c; margin: 14px 0 16px; flex: 1; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: #f6f7fc;
+}
+.btn:hover { border-color: #c9cde6; }
+.btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+footer { text-align: center; color: var(--on-dark-muted); font-size: 14px; margin-top: 36px; }
+footer a { color: #fff; }
+footer p { margin: 6px 0; }
+
+/* Dil seçimi: html[data-ui] hangi dilin görüneceğini belirler */
+html[data-ui="tr"] [lang="en"], html[data-ui="en"] [lang="tr"] { display: none; }
