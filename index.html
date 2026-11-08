@@ -1,146 +1,263 @@
 <!doctype html>
-<html lang="tr" data-ui="tr">
+<html lang="en" data-ui="en" data-title-en="Velaris Labs | Mobile apps and games" data-title-tr="Velaris Labs | Mobil uygulamalar ve oyunlar">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Velaris Labs</title>
-  <meta name="description" content="Velaris Labs — telefonlar için uygulamalar ve oyunlar: Astelya, Bubble Odyssey, Köprü Ustası, Isochron.">
-  <link rel="icon" href="astelya/icon.png">
+  <title>Velaris Labs | Mobile apps and games</title>
+  <meta name="description" content="Velaris Labs is an independent studio from Türkiye making mobile apps and games for Android: Astelya, Bubble Odyssey, Köprü Ustası and Isochron.">
+  <meta name="theme-color" content="#070a1c">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Velaris Labs">
+  <meta property="og:title" content="Velaris Labs | Mobile apps and games">
+  <meta property="og:description" content="An independent studio from Türkiye making thoughtful mobile apps and games for Android.">
+  <meta property="og:url" content="https://balimogulkoc.github.io/">
+  <link rel="canonical" href="https://balimogulkoc.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
-  <link rel="stylesheet" href="home.css">
-  <script>
-    // Kayıtlı seçim yoksa tarayıcı dili Türkçe ise Türkçe, değilse İngilizce
-    (function () {
-      var lang = 'tr';
-      try { lang = localStorage.getItem('velaris.lang') || ''; } catch (e) { lang = ''; }
-      if (lang !== 'tr' && lang !== 'en') lang = /^tr\b/i.test(navigator.language || '') ? 'tr' : 'en';
-      document.documentElement.setAttribute('data-ui', lang);
-      document.documentElement.setAttribute('lang', lang);
-    })();
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="lang" role="group" aria-label="Dil / Language">
-        <button type="button" data-set="tr" aria-pressed="true">TR</button>
-        <button type="button" data-set="en" aria-pressed="false">EN</button>
+  <a class="skip" href="#apps"><span lang="en">Skip to apps</span><span lang="tr">Uygulamalara geç</span></a>
+
+  <header class="nav">
+    <div class="nav-in">
+      <a class="brand" href="./" aria-label="Velaris Labs">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="vg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d995"/><stop offset="1" stop-color="#d8b45f"/></linearGradient></defs><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="url(#vg1)"/><circle cx="31" cy="9" r="1.6" fill="#eceeff"/></svg>
+        <span>Velaris Labs</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#apps"><span lang="en">Apps</span><span lang="tr">Uygulamalar</span></a>
+        <a href="#about"><span lang="en">About</span><span lang="tr">Hakkımızda</span></a>
+        <a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language / Dil">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
       </div>
     </div>
+  </header>
 
-    <header class="hero">
-      <div class="mark">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="#c9a24b"/><circle cx="31" cy="9" r="1.6" fill="#eef0ff"/></svg>
-        <h1>Velaris Labs</h1>
+  <main>
+    <section class="section hero">
+      <div>
+        <p class="eyebrow"><span lang="en">Independent app studio · Türkiye</span><span lang="tr">Bağımsız uygulama stüdyosu · Türkiye</span></p>
+        <h1>
+          <span lang="en">Apps and games, <em>made with care.</em></span>
+          <span lang="tr">Özenle yapılmış <em>uygulamalar ve oyunlar.</em></span>
+        </h1>
+        <p class="lede">
+          <span lang="en">Velaris Labs designs and builds mobile apps and games for Android, from astrology and watch tools to playful puzzles. Simple, fast and respectful of your privacy.</span>
+          <span lang="tr">Velaris Labs, Android için mobil uygulamalar ve oyunlar tasarlayıp geliştirir. Astrolojiden saat araçlarına, eğlenceli bulmacalara kadar: sade, hızlı ve gizliliğinize saygılı.</span>
+        </p>
+        <div class="cta">
+          <a class="btn gold" href="#apps"><span lang="en">Explore our apps</span><span lang="tr">Uygulamalarımız</span></a>
+          <a class="btn" href="#contact"><span lang="en">Contact us</span><span lang="tr">Bize yazın</span></a>
+        </div>
       </div>
-      <p>
-        <span lang="tr">Telefonlar için özenle hazırlanmış uygulamalar ve oyunlar.</span>
-        <span lang="en">Thoughtfully made apps and games for phones.</span>
-      </p>
-    </header>
 
-    <main class="apps">
-      <section class="app">
-        <div class="app-head">
-          <img src="astelya/icon.png" alt="Astelya" width="72" height="72">
-          <div>
-            <h2>Astelya: Astrolog &amp; Harita</h2>
-            <span class="tag"><span lang="tr">Astroloji · Türkçe</span><span lang="en">Astrology · in Turkish</span></span>
-          </div>
+      <div class="orbit" aria-hidden="true">
+        <svg class="rings" viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="188" stroke="rgba(255,255,255,0.07)"/>
+          <circle cx="200" cy="200" r="132" stroke="rgba(216,180,95,0.35)" stroke-dasharray="2 7"/>
+          <circle cx="200" cy="200" r="78" stroke="rgba(255,255,255,0.09)"/>
+          <circle cx="388" cy="200" r="3" fill="#f1d995"/>
+          <circle cx="107" cy="107" r="2.2" fill="#eceeff"/>
+          <circle cx="200" cy="12" r="2" fill="#eceeff"/>
+          <circle cx="278" cy="200" r="2" fill="#a6acd6"/>
+        </svg>
+        <div class="core">
+          <svg viewBox="0 0 40 40"><defs><linearGradient id="vg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d995"/><stop offset="1" stop-color="#d8b45f"/></linearGradient></defs><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="url(#vg2)"/></svg>
         </div>
+        <img class="p1" src="astelya/icon.png" alt="">
+        <img class="p2" src="bubble-odyssey/icon.png" alt="">
+        <img class="p3" src="isochron/icon.png" alt="">
+        <img class="p4" src="kopru-ustasi/icon.png" alt="">
+      </div>
+    </section>
+
+    <section class="section block" id="apps">
+      <div class="block-head">
+        <p class="kicker"><span lang="en">Our apps</span><span lang="tr">Uygulamalarımız</span></p>
+        <h2><span lang="en">Made for your phone</span><span lang="tr">Telefonunuz için hazırlandı</span></h2>
         <p>
-          <span lang="tr">Kişisel astroloğun: doğum haritan, günlük yorumlar, Ay takvimi, transitler, tarot ve haritana özel sorularını yanıtlayan Lyra.</span>
-          <span lang="en">Your personal astrologer: birth chart, daily readings, moon calendar, transits, tarot and Lyra, who answers questions about your own chart.</span>
+          <span lang="en">Every app comes with a clear privacy policy that explains exactly what it uses and why.</span>
+          <span lang="tr">Her uygulamanın, neyi neden kullandığını açıkça anlatan bir gizlilik politikası vardır.</span>
         </p>
-        <div class="links">
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.velarislabs.astria">Google Play</a>
-          <a class="btn" href="astria-privacy/"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
-          <a class="btn" href="astria-privacy/kosullar.html"><span lang="tr">Kullanım koşulları</span><span lang="en">Terms of use</span></a>
-        </div>
-      </section>
+      </div>
 
-      <section class="app">
-        <div class="app-head">
-          <img src="bubble-odyssey/icon.png" alt="Bubble Odyssey" width="72" height="72">
-          <div>
-            <h2>Bubble Odyssey</h2>
-            <span class="tag"><span lang="tr">Bulmaca oyunu</span><span lang="en">Puzzle game</span></span>
+      <div class="apps">
+        <article class="app">
+          <div class="app-head">
+            <img src="astelya/icon.png" alt="" width="68" height="68">
+            <div>
+              <h3><span lang="en">Astelya: Birth Chart Astrology</span><span lang="tr">Astelya: Astrolog &amp; Harita</span></h3>
+              <div class="meta">
+                <span class="badge live"><span lang="en">On Google Play</span><span lang="tr">Google Play'de</span></span>
+                <span class="tag"><span lang="en">Astrology · in Turkish</span><span lang="tr">Astroloji · Türkçe</span></span>
+              </div>
+            </div>
           </div>
-        </div>
-        <p>
-          <span lang="tr">25 dünyada 500 seviye boyunca nişan al, eşleştir ve patlat. Yaratıkları kurtar, altın parayı kovala; değişen, ayna ve iki renkli balonlarda ustalaş.</span>
-          <span lang="en">Aim, match and pop your way through 500 levels in 25 worlds. Rescue the critters, chase the gold coin and master changing, mirror and two-colour bubbles.</span>
-        </p>
-        <div class="links">
-          <a class="btn primary" href="bubble-odyssey/"><span lang="tr">Oyun sayfası</span><span lang="en">Game page</span></a>
-          <a class="btn" href="bubble-odyssey/privacy.html"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
-        </div>
-      </section>
-
-      <section class="app">
-        <div class="app-head">
-          <img src="kopru-ustasi/icon.png" alt="Köprü Ustası" width="72" height="72">
-          <div>
-            <h2>Köprü Ustası: Bridge Builder</h2>
-            <span class="tag"><span lang="tr">Fizik bulmacası</span><span lang="en">Physics puzzle</span></span>
+          <p class="app-desc">
+            <span lang="en">Your personal astrologer: birth chart, daily readings, moon calendar, transits, tarot and Lyra, who answers questions about your own chart.</span>
+            <span lang="tr">Kişisel astroloğunuz: doğum haritası, günlük yorumlar, Ay takvimi, transitler, tarot ve haritanıza özel sorularınızı yanıtlayan Lyra.</span>
+          </p>
+          <div class="app-actions">
+            <a class="btn gold small" href="https://play.google.com/store/apps/details?id=com.velarislabs.astria" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.6v16.8c0 .8.9 1.3 1.6.9l13.3-8.4a1 1 0 0 0 0-1.7L7.6 2.8C6.9 2.3 6 2.8 6 3.6z"/></svg>
+              <span lang="en">Get it on Google Play</span><span lang="tr">Google Play'den indir</span>
+            </a>
           </div>
-        </div>
-        <p>
-          <span lang="tr">Sallanan köprüler kur, minibüsü karşıya geçir; her şey çökerken gül. Boğaz'dan Ay'a uzanan 7 dünyada 35 seviye.</span>
-          <span lang="en">Build wobbly bridges, send the minibus across and laugh when it all comes crashing down. 35 levels in 7 worlds, from the Bosphorus to the Moon.</span>
-        </p>
-        <div class="links">
-          <a class="btn" href="kopru-ustasi/privacy.html"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
-        </div>
-      </section>
-
-      <section class="app">
-        <div class="app-head">
-          <img src="isochron/icon.png" alt="Isochron" width="72" height="72">
-          <div>
-            <h2>Isochron</h2>
-            <span class="tag"><span lang="tr">Saat doğruluğu ölçer</span><span lang="en">Watch timegrapher</span></span>
+          <div class="legal">
+            <a lang="en" href="astria-privacy/en/">Privacy policy</a>
+            <a lang="tr" href="astria-privacy/">Gizlilik politikası</a>
+            <a lang="en" href="astria-privacy/en/terms.html">Terms of use</a>
+            <a lang="tr" href="astria-privacy/kosullar.html">Kullanım koşulları</a>
+            <a lang="en" href="astria-privacy/en/account-deletion.html">Account deletion</a>
+            <a lang="tr" href="astria-privacy/hesap-silme.html">Hesap silme</a>
           </div>
-        </div>
+        </article>
+
+        <article class="app">
+          <div class="app-head">
+            <img src="bubble-odyssey/icon.png" alt="" width="68" height="68">
+            <div>
+              <h3>Bubble Odyssey</h3>
+              <div class="meta">
+                <span class="badge soon"><span lang="en">Coming soon</span><span lang="tr">Yakında</span></span>
+                <span class="tag"><span lang="en">Puzzle game</span><span lang="tr">Bulmaca oyunu</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="app-desc">
+            <span lang="en">Aim, match and pop your way through 500 levels in 25 worlds. Rescue the critters, chase the gold coin and master changing, mirror and two-colour bubbles.</span>
+            <span lang="tr">25 dünyada 500 seviye boyunca nişan al, eşleştir ve patlat. Yaratıkları kurtar, altın parayı kovala; değişen, ayna ve iki renkli balonlarda ustalaş.</span>
+          </p>
+          <div class="app-actions">
+            <a class="btn small" href="bubble-odyssey/"><span lang="en">Game page</span><span lang="tr">Oyun sayfası</span></a>
+          </div>
+          <div class="legal">
+            <a href="bubble-odyssey/privacy.html"><span lang="en">Privacy policy</span><span lang="tr">Gizlilik politikası</span></a>
+          </div>
+        </article>
+
+        <article class="app">
+          <div class="app-head">
+            <img src="kopru-ustasi/icon.png" alt="" width="68" height="68">
+            <div>
+              <h3>Köprü Ustası: Bridge Builder</h3>
+              <div class="meta">
+                <span class="badge soon"><span lang="en">Coming soon</span><span lang="tr">Yakında</span></span>
+                <span class="tag"><span lang="en">Physics puzzle</span><span lang="tr">Fizik bulmacası</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="app-desc">
+            <span lang="en">Build wobbly bridges, send the minibus across and laugh when it all comes crashing down. 35 levels in 7 worlds, from the Bosphorus to the Moon.</span>
+            <span lang="tr">Sallanan köprüler kur, minibüsü karşıya geçir; her şey çökerken gül. Boğaz'dan Ay'a uzanan 7 dünyada 35 seviye.</span>
+          </p>
+          <div class="legal">
+            <a href="kopru-ustasi/privacy.html"><span lang="en">Privacy policy</span><span lang="tr">Gizlilik politikası</span></a>
+          </div>
+        </article>
+
+        <article class="app">
+          <div class="app-head">
+            <img src="isochron/icon.png" alt="" width="68" height="68">
+            <div>
+              <h3>Isochron</h3>
+              <div class="meta">
+                <span class="badge soon"><span lang="en">Coming soon</span><span lang="tr">Yakında</span></span>
+                <span class="tag"><span lang="en">Watch timegrapher</span><span lang="tr">Saat doğruluğu ölçer</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="app-desc">
+            <span lang="en">A timegrapher in your pocket: measure your mechanical watch's rate, beat error and amplitude with the phone's microphone, track it over time and look up its movement in a 117-calibre encyclopedia.</span>
+            <span lang="tr">Cebinizdeki timegrapher: mekanik saatinizin günlük sapmasını, vuruş hatasını ve genliğini telefonun mikrofonuyla ölçün, zaman içinde takip edin ve 117 kalibrelik ansiklopedide mekanizmasını inceleyin.</span>
+          </p>
+          <div class="legal">
+            <a href="isochron/privacy.html"><span lang="en">Privacy policy</span><span lang="tr">Gizlilik politikası</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section block" id="about">
+      <div class="block-head">
+        <p class="kicker"><span lang="en">About the studio</span><span lang="tr">Stüdyo hakkında</span></p>
+        <h2><span lang="en">Small studio, careful work</span><span lang="tr">Küçük stüdyo, özenli iş</span></h2>
         <p>
-          <span lang="tr">Cebindeki timegrapher: mekanik saatinin günlük sapmasını, vuruş hatasını ve genliğini telefonun mikrofonuyla ölç, zaman içinde takip et ve 117 kalibrelik ansiklopedide mekanizmasını incele.</span>
-          <span lang="en">A timegrapher in your pocket: measure your mechanical watch's rate, beat error and amplitude with the phone's microphone, track it over time and look up its movement in a 117-calibre encyclopedia.</span>
+          <span lang="en">Velaris Labs is an independent studio based in Türkiye. We make the apps we would want to use ourselves: clean, quick to learn and honest about data.</span>
+          <span lang="tr">Velaris Labs, Türkiye merkezli bağımsız bir stüdyodur. Kendimizin de kullanmak isteyeceği uygulamalar yapıyoruz: sade, kolay öğrenilen ve veri konusunda dürüst.</span>
         </p>
-        <div class="links">
-          <a class="btn" href="isochron/privacy.html"><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+      </div>
+      <div class="values">
+        <div class="value">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3><span lang="en">Privacy first</span><span lang="tr">Önce gizlilik</span></h3>
+          <p>
+            <span lang="en">We collect as little as possible, and our policies say plainly what each app uses and why.</span>
+            <span lang="tr">Olabildiğince az veri toplarız; politikalarımız her uygulamanın neyi neden kullandığını açıkça yazar.</span>
+          </p>
         </div>
-      </section>
-    </main>
+        <div class="value">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16z"/></svg></div>
+          <h3><span lang="en">Crafted with care</span><span lang="tr">Özenle tasarlanır</span></h3>
+          <p>
+            <span lang="en">Clean design, smooth performance and the small details that make an app a pleasure to use.</span>
+            <span lang="tr">Sade tasarım, akıcı performans ve bir uygulamayı keyifli kılan küçük ayrıntılar.</span>
+          </p>
+        </div>
+        <div class="value">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div>
+          <h3><span lang="en">Made for everyone</span><span lang="tr">Herkes için</span></h3>
+          <p>
+            <span lang="en">Made in Türkiye for people everywhere, in more and more languages.</span>
+            <span lang="tr">Türkiye'de, her yerdeki kullanıcılar için ve giderek daha fazla dilde hazırlanır.</span>
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>
-        <a href="https://play.google.com/store/apps/developer?id=Velaris+Labs"><span lang="tr">Google Play'deki tüm uygulamalarımız</span><span lang="en">All our apps on Google Play</span></a>
-      </p>
-      <p><span lang="tr">İletişim</span><span lang="en">Contact</span>: <a href="mailto:mogulkocbali@gmail.com">mogulkocbali@gmail.com</a></p>
-      <p>© 2026 Velaris Labs</p>
-    </footer>
-  </div>
+    <section class="section block" id="contact">
+      <div class="contact">
+        <div>
+          <p class="kicker"><span lang="en">Contact</span><span lang="tr">İletişim</span></p>
+          <h2><span lang="en">Get in touch</span><span lang="tr">Bize ulaşın</span></h2>
+          <p>
+            <span lang="en">Questions, feedback, bug reports or partnership ideas: write to us, we read every message.</span>
+            <span lang="tr">Sorular, geri bildirimler, hata bildirimleri ya da iş birliği teklifleri için bize yazın; her mesajı okuyoruz.</span>
+          </p>
+          <a class="mail" href="mailto:velarislabstudio@gmail.com">velarislabstudio@gmail.com</a>
+        </div>
+        <div class="cta">
+          <a class="btn gold" href="mailto:velarislabstudio@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span lang="en">Send an email</span><span lang="tr">E-posta gönder</span>
+          </a>
+          <button class="btn" type="button" data-copy="velarislabstudio@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span class="when-idle"><span lang="en">Copy address</span><span lang="tr">Adresi kopyala</span></span>
+            <span class="when-copied" role="status"><span lang="en">Copied</span><span lang="tr">Kopyalandı</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <script>
-    (function () {
-      var root = document.documentElement;
-      var buttons = document.querySelectorAll('.lang button');
-      function apply(lang) {
-        root.setAttribute('data-ui', lang);
-        root.setAttribute('lang', lang);
-        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang)); });
-      }
-      apply(root.getAttribute('data-ui'));
-      buttons.forEach(function (b) {
-        b.addEventListener('click', function () {
-          var lang = b.getAttribute('data-set');
-          apply(lang);
-          try { localStorage.setItem('velaris.lang', lang); } catch (e) {}
-        });
-      });
-    })();
-  </script>
+  <footer class="foot">
+    <a class="brand" href="./" aria-label="Velaris Labs">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="vg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d995"/><stop offset="1" stop-color="#d8b45f"/></linearGradient></defs><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="url(#vg3)"/><circle cx="31" cy="9" r="1.6" fill="#eceeff"/></svg>
+      <span>Velaris Labs</span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="https://play.google.com/store/apps/developer?id=Velaris+Labs" rel="noopener"><span lang="en">Our apps on Google Play</span><span lang="tr">Google Play'deki uygulamalarımız</span></a>
+      <a href="mailto:velarislabstudio@gmail.com">velarislabstudio@gmail.com</a>
+    </nav>
+    <span>© <span data-year>2026</span> Velaris Labs</span>
+  </footer>
 </body>
 </html>

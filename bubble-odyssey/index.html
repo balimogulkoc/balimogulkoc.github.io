@@ -1,38 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ui="en" data-title-en="Bubble Odyssey | Velaris Labs" data-title-tr="Bubble Odyssey | Velaris Labs">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bubble Odyssey</title>
-  <meta name="description" content="Bubble Odyssey — a colourful bubble shooter with 500 levels in 25 worlds.">
+  <title>Bubble Odyssey | Velaris Labs</title>
+  <meta name="description" content="Bubble Odyssey: a colourful bubble shooter with 500 levels in 25 worlds, by Velaris Labs.">
+  <meta name="theme-color" content="#070a1c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bubble Odyssey">
+  <meta property="og:description" content="A colourful bubble shooter with 500 levels in 25 worlds.">
+  <meta property="og:image" content="https://balimogulkoc.github.io/bubble-odyssey/icon.png">
   <link rel="icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css">
+  <script src="../site.js"></script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <img class="logo" src="logo.webp" alt="Bubble Odyssey" width="520" height="260">
-      <p>Aim, match three and watch whole clusters fall. 500 levels across 25 worlds, from Candy Valley to the Cosmic Galaxy.</p>
-    </header>
+  <header class="nav">
+    <div class="nav-in">
+      <a class="brand" href="../" aria-label="Velaris Labs home">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="#d8b45f"/><circle cx="31" cy="9" r="1.6" fill="#eceeff"/></svg>
+        <span>Velaris Labs</span>
+      </a>
+      <div class="lang" role="group" aria-label="Language / Dil">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
+      </div>
+    </div>
+  </header>
 
-    <section class="card">
-      <h2>Features</h2>
-      <ul>
+  <div class="doc-head">
+    <img class="logo" src="logo.webp" alt="Bubble Odyssey" width="500" height="250">
+    <p class="lede">
+      <span lang="en">Aim, match three and watch whole clusters fall. 500 levels across 25 worlds, from Candy Valley to the Cosmic Galaxy.</span>
+      <span lang="tr">Nişan al, üç rengi eşleştir ve koca kümelerin düşüşünü izle. Şeker Vadisi'nden Kozmik Galaksi'ye 25 dünyada 500 seviye.</span>
+    </p>
+    <span class="badge soon"><span lang="en">Coming soon to Google Play</span><span lang="tr">Yakında Google Play'de</span></span>
+  </div>
+
+  <main class="page-pad">
+    <article class="paper">
+      <h2><span lang="en">Features</span><span lang="tr">Özellikler</span></h2>
+      <ul lang="en">
         <li>500 hand-paced levels in 25 chapters, each ending with a chapter finale and a reward chest</li>
         <li>Changing, two-colour, clone, mirror and rainbow bubbles, chains, spider webs, vortexes and more</li>
         <li>Rescue the critters, collect colours or reach the big gold coin</li>
         <li>Bomb and spaceship power meters, plus lightning, laser and colour-ball boosters</li>
         <li>Colour-blind mode, Turkish and English</li>
       </ul>
-      <p>Coming soon to Google Play.</p>
-      <a class="btn secondary" href="privacy.html">Privacy policy</a>
-    </section>
+      <ul lang="tr">
+        <li>25 bölümde, elle dengelenmiş 500 seviye; her bölüm bir final seviyesi ve ödül sandığıyla biter</li>
+        <li>Değişen, iki renkli, klon, ayna ve gökkuşağı balonlar, zincirler, örümcek ağları, girdaplar ve daha fazlası</li>
+        <li>Yaratıkları kurtar, renkleri topla ya da büyük altın paraya ulaş</li>
+        <li>Bomba ve uzay gemisi güç göstergeleri; şimşek, lazer ve renk topu güçlendiricileri</li>
+        <li>Renk körlüğü modu, Türkçe ve İngilizce</li>
+      </ul>
+      <p>
+        <a class="btn" href="privacy.html"><span lang="en">Privacy policy</span><span lang="tr">Gizlilik politikası</span></a>
+      </p>
+    </article>
+  </main>
 
-    <footer>
-      Bubble Odyssey Team · <a href="mailto:mogulkocbali@gmail.com">mogulkocbali@gmail.com</a> · <a href="../">Home</a>
-    </footer>
-  </div>
+  <footer class="foot">
+    <a class="brand" href="../" aria-label="Velaris Labs home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L23.2 16.8 L37 20 L23.2 23.2 L20 37 L16.8 23.2 L3 20 L16.8 16.8 Z" fill="#d8b45f"/><circle cx="31" cy="9" r="1.6" fill="#eceeff"/></svg>
+      <span>Velaris Labs</span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="../"><span lang="en">All apps</span><span lang="tr">Tüm uygulamalar</span></a>
+      <a href="mailto:velarislabstudio@gmail.com">velarislabstudio@gmail.com</a>
+    </nav>
+    <span>© <span data-year>2026</span> Velaris Labs</span>
+  </footer>
 </body>
 </html>
