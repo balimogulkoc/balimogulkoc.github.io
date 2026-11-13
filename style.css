@@ -245,6 +245,7 @@ img { max-width: 100%; }
 .doc-head .sub { margin: 0; color: var(--gold-2); font-weight: 700; font-size: 17px; }
 .doc-head .lede { margin: 14px auto 0; color: var(--muted); max-width: 580px; font-size: 17px; }
 .doc-head .badge { margin-top: 16px; }
+.doc-head .play-cta { margin: 18px 0 0; }
 
 .paper {
   max-width: 880px; margin: 28px auto 0;
